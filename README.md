@@ -3,7 +3,7 @@
 ### 🏆 FIFA World Cup 2026™ &nbsp;·&nbsp; 11 June – 19 July 2026
 
 <!-- COUNTDOWN:START -->
-![Countdown](https://img.shields.io/badge/⏳_Kickoff-8_days-ff4b4b?style=for-the-badge)
+<img src="assets/countdown.svg" alt="FIFA World Cup 2026 countdown" width="480">
 <!-- COUNTDOWN:END -->
 
 </div>
