@@ -1,6 +1,7 @@
 {
   "name": "worldcup-backend",
   "version": "0.0.1",
+  "packageManager": "pnpm@10.33.2",
   "description": "Open-source FIFA World Cup 2026 companion backend — REST + WebSocket API with a pre-loaded PostgreSQL dataset (teams, squads, fixtures, venues, standings, broadcasts, content) from multiple public sources. NestJS 11 + Fastify + Drizzle.",
   "author": "Emre BALLI",
   "license": "MIT",
