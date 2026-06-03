@@ -1,3 +1,15 @@
+<div align="center">
+
+### 🏆 FIFA World Cup 2026™ &nbsp;·&nbsp; 11 June – 19 July 2026
+
+<!-- COUNTDOWN:START -->
+![Countdown](https://img.shields.io/badge/⏳_Kickoff-8_days-ff4b4b?style=for-the-badge)
+<!-- COUNTDOWN:END -->
+
+</div>
+
+---
+
 # worldcup-backend
 
 > A fast, modular backend for a **FIFA World Cup 2026 companion app** — REST + WebSocket, powered by a **pre-loaded PostgreSQL dataset** you get the moment you clone.
@@ -7,7 +19,7 @@
 ![NestJS](https://img.shields.io/badge/NestJS-11-E0234E?logo=nestjs&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-17-4169E1?logo=postgresql&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
-[![CI](https://img.shields.io/github/actions/workflow/status/emrbli/worldcup/ci.yml?branch=main&label=CI)](https://github.com/emrbli/worldcup/actions)
+[![CI](https://github.com/emrbli/worldcup/actions/workflows/ci.yml/badge.svg)](https://github.com/emrbli/worldcup/actions/workflows/ci.yml)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
 ---
