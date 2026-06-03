@@ -1,0 +1,35 @@
+{
+  "IdStage": "289273",
+  "IdMatch": "400021443",
+  "IdCompetition": "17",
+  "IdSeason": "285023",
+  "IdGroup": null,
+  "Event": [
+    {
+      "Type": 0,
+      "MatchMinute": "12'",
+      "IdPlayer": "P1001",
+      "PlayerName": [{ "Locale": "en-GB", "Description": "Player One" }],
+      "IdTeam": "43911",
+      "EventDescription": [{ "Locale": "en-GB", "Description": "Goal" }]
+    },
+    {
+      "Type": 3,
+      "MatchMinute": "34'",
+      "IdPlayer": "P1002",
+      "PlayerName": [{ "Locale": "en-GB", "Description": "Player Two" }],
+      "IdTeam": "43883",
+      "EventDescription": [{ "Locale": "en-GB", "Description": "Yellow Card" }]
+    },
+    {
+      "Type": 5,
+      "MatchMinute": "60'",
+      "IdPlayer": "P1003",
+      "PlayerName": [{ "Locale": "en-GB", "Description": "Player Three" }],
+      "IdTeam": "43911",
+      "EventDescription": [{ "Locale": "en-GB", "Description": "Substitution" }]
+    }
+  ],
+  "Properties": {},
+  "IsUpdateable": null
+}

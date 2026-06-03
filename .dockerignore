@@ -1,0 +1,11 @@
+node_modules
+dist
+.git
+.github
+crawler/.venv
+coverage
+*.log
+.env
+.DS_Store
+test
+.vscode

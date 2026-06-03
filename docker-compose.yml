@@ -1,0 +1,20 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: worldcup-pg
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: dev
+      POSTGRES_DB: worldcup
+    ports:
+      - "5432:5432"
+    volumes:
+      - worldcup-pgdata:/var/lib/postgresql/data
+      # Auto-restore the bundled dataset on FIRST start (empty volume only).
+      # The official postgres image runs *.sql / *.sql.gz here at init.
+      # Reset everything with:  docker compose down -v && docker compose up -d
+      - ./db/dump:/docker-entrypoint-initdb.d:ro
+    restart: unless-stopped
+
+volumes:
+  worldcup-pgdata:

@@ -1,0 +1,224 @@
+{
+ "ContinuationToken": null,
+ "ContinuationHash": null,
+ "Results": [
+  {
+   "IdSeason": "285023",
+   "IdCompetition": "17",
+   "IdCountry": "AFG",
+   "IdCountryIso3166Alpha2": "AF",
+   "CountryName": [
+    {
+     "Locale": "en-GB",
+     "Description": "Afghanistan"
+    }
+   ],
+   "Matches": [
+    {
+     "IdMatch": "400021443",
+     "Date": "2026-06-11T19:00:00Z",
+     "Sources": [
+      {
+       "IdChannel": "912",
+       "Name": "AWCC Sports Portal",
+       "Logo": "https://extranets.fifa.com/TvStationPhotos/912.png",
+       "TvChannelUrl": "https://sports.afghan-wireless.com/",
+       "IOsUrl": "",
+       "AndroidUrl": "",
+       "Url": "https://sports.afghan-wireless.com/",
+       "Language": "English"
+      },
+      {
+       "IdChannel": "916",
+       "Name": "Ariana Television Website",
+       "Logo": "https://extranets.fifa.com/TvStationPhotos/916.png",
+       "TvChannelUrl": "https://www.arianatelevision.com/",
+       "IOsUrl": "",
+       "AndroidUrl": "",
+       "Url": "https://www.arianatelevision.com/",
+       "Language": "English"
+      },
+      {
+       "IdChannel": "197",
+       "Name": "Ariana Television",
+       "Logo": "https://extranets.fifa.com/TvStationPhotos/197.png",
+       "TvChannelUrl": "https://www.arianatelevision.com",
+       "IOsUrl": "",
+       "AndroidUrl": "",
+       "Url": "https://www.arianatelevision.com",
+       "Language": "Persian"
+      }
+     ]
+    },
+    {
+     "IdMatch": "400021441",
+     "Date": "2026-06-12T02:00:00Z",
+     "Sources": [
+      {
+       "IdChannel": "912",
+       "Name": "AWCC Sports Portal",
+       "Logo": "https://extranets.fifa.com/TvStationPhotos/912.png",
+       "TvChannelUrl": "https://sports.afghan-wireless.com/",
+       "IOsUrl": "",
+       "AndroidUrl": "",
+       "Url": "https://sports.afghan-wireless.com/",
+       "Language": "English"
+      },
+      {
+       "IdChannel": "916",
+       "Name": "Ariana Television Website",
+       "Logo": "https://extranets.fifa.com/TvStationPhotos/916.png",
+       "TvChannelUrl": "https://www.arianatelevision.com/",
+       "IOsUrl": "",
+       "AndroidUrl": "",
+       "Url": "https://www.arianatelevision.com/",
+       "Language": "English"
+      },
+      {
+       "IdChannel": "197",
+       "Name": "Ariana Television",
+       "Logo": "https://extranets.fifa.com/TvStationPhotos/197.png",
+       "TvChannelUrl": "https://www.arianatelevision.com",
+       "IOsUrl": "",
+       "AndroidUrl": "",
+       "Url": "https://www.arianatelevision.com",
+       "Language": "Persian"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "IdSeason": "285023",
+   "IdCompetition": "17",
+   "IdCountry": "ALB",
+   "IdCountryIso3166Alpha2": "AL",
+   "CountryName": [
+    {
+     "Locale": "en-GB",
+     "Description": "Albania"
+    }
+   ],
+   "Matches": [
+    {
+     "IdMatch": "400021443",
+     "Date": "2026-06-11T19:00:00Z",
+     "Sources": [
+      {
+       "IdChannel": "862",
+       "Name": "Tv Klan",
+       "Logo": "https://extranets.fifa.com/TvStationPhotos/862.png",
+       "TvChannelUrl": "http://www.tvklan.al",
+       "IOsUrl": "",
+       "AndroidUrl": "",
+       "Url": "http://www.tvklan.al",
+       "Language": "Albanian"
+      }
+     ]
+    },
+    {
+     "IdMatch": "400021441",
+     "Date": "2026-06-12T02:00:00Z",
+     "Sources": [
+      {
+       "IdChannel": "862",
+       "Name": "Tv Klan",
+       "Logo": "https://extranets.fifa.com/TvStationPhotos/862.png",
+       "TvChannelUrl": "http://www.tvklan.al",
+       "IOsUrl": "",
+       "AndroidUrl": "",
+       "Url": "http://www.tvklan.al",
+       "Language": "Albanian"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "IdSeason": "285023",
+   "IdCompetition": "17",
+   "IdCountry": "ALG",
+   "IdCountryIso3166Alpha2": "DZ",
+   "CountryName": [
+    {
+     "Locale": "en-GB",
+     "Description": "Algeria"
+    }
+   ],
+   "Matches": [
+    {
+     "IdMatch": "400021443",
+     "Date": "2026-06-11T19:00:00Z",
+     "Sources": [
+      {
+       "IdChannel": "903",
+       "Name": "beIN Sports MAX 1",
+       "Logo": "https://extranets.fifa.com/TvStationPhotos/903.png",
+       "TvChannelUrl": "https://www.bein.com/en/tv-guide/?c=qa\t",
+       "IOsUrl": "",
+       "AndroidUrl": "",
+       "Url": "https://www.bein.com/en/tv-guide/?c=qa\t",
+       "Language": "Arabic"
+      },
+      {
+       "IdChannel": "907",
+       "Name": "beIN Sports MAX 5",
+       "Logo": "https://extranets.fifa.com/TvStationPhotos/907.png",
+       "TvChannelUrl": "https://www.bein.com/en/tv-guide/?c=qa",
+       "IOsUrl": "",
+       "AndroidUrl": "",
+       "Url": "https://www.bein.com/en/tv-guide/?c=qa",
+       "Language": "English"
+      },
+      {
+       "IdChannel": "904",
+       "Name": "beIN Sports MAX 2 ",
+       "Logo": "https://extranets.fifa.com/TvStationPhotos/904.png",
+       "TvChannelUrl": "https://connect.bein.com/",
+       "IOsUrl": "",
+       "AndroidUrl": "",
+       "Url": "https://connect.bein.com/",
+       "Language": "Arabic"
+      }
+     ]
+    },
+    {
+     "IdMatch": "400021441",
+     "Date": "2026-06-12T02:00:00Z",
+     "Sources": [
+      {
+       "IdChannel": "903",
+       "Name": "beIN Sports MAX 1",
+       "Logo": "https://extranets.fifa.com/TvStationPhotos/903.png",
+       "TvChannelUrl": "https://www.bein.com/en/tv-guide/?c=qa\t",
+       "IOsUrl": "",
+       "AndroidUrl": "",
+       "Url": "https://www.bein.com/en/tv-guide/?c=qa\t",
+       "Language": "Arabic"
+      },
+      {
+       "IdChannel": "904",
+       "Name": "beIN Sports MAX 2 ",
+       "Logo": "https://extranets.fifa.com/TvStationPhotos/904.png",
+       "TvChannelUrl": "https://connect.bein.com/",
+       "IOsUrl": "",
+       "AndroidUrl": "",
+       "Url": "https://connect.bein.com/",
+       "Language": "Arabic"
+      },
+      {
+       "IdChannel": "907",
+       "Name": "beIN Sports MAX 5",
+       "Logo": "https://extranets.fifa.com/TvStationPhotos/907.png",
+       "TvChannelUrl": "https://www.bein.com/en/tv-guide/?c=qa",
+       "IOsUrl": "",
+       "AndroidUrl": "",
+       "Url": "https://www.bein.com/en/tv-guide/?c=qa",
+       "Language": "English"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

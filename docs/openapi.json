@@ -1,0 +1,731 @@
+{
+  "openapi": "3.0.0",
+  "paths": {
+    "/health": {
+      "get": {
+        "operationId": "HealthController_check",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "The Health Check is successful",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "example": "ok"
+                    },
+                    "info": {
+                      "type": "object",
+                      "example": {
+                        "database": {
+                          "status": "up"
+                        }
+                      },
+                      "additionalProperties": {
+                        "type": "object",
+                        "required": [
+                          "status"
+                        ],
+                        "properties": {
+                          "status": {
+                            "type": "string"
+                          }
+                        },
+                        "additionalProperties": true
+                      },
+                      "nullable": true
+                    },
+                    "error": {
+                      "type": "object",
+                      "example": {},
+                      "additionalProperties": {
+                        "type": "object",
+                        "required": [
+                          "status"
+                        ],
+                        "properties": {
+                          "status": {
+                            "type": "string"
+                          }
+                        },
+                        "additionalProperties": true
+                      },
+                      "nullable": true
+                    },
+                    "details": {
+                      "type": "object",
+                      "example": {
+                        "database": {
+                          "status": "up"
+                        }
+                      },
+                      "additionalProperties": {
+                        "type": "object",
+                        "required": [
+                          "status"
+                        ],
+                        "properties": {
+                          "status": {
+                            "type": "string"
+                          }
+                        },
+                        "additionalProperties": true
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "The Health Check is not successful",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "example": "error"
+                    },
+                    "info": {
+                      "type": "object",
+                      "example": {
+                        "database": {
+                          "status": "up"
+                        }
+                      },
+                      "additionalProperties": {
+                        "type": "object",
+                        "required": [
+                          "status"
+                        ],
+                        "properties": {
+                          "status": {
+                            "type": "string"
+                          }
+                        },
+                        "additionalProperties": true
+                      },
+                      "nullable": true
+                    },
+                    "error": {
+                      "type": "object",
+                      "example": {
+                        "redis": {
+                          "status": "down",
+                          "message": "Could not connect"
+                        }
+                      },
+                      "additionalProperties": {
+                        "type": "object",
+                        "required": [
+                          "status"
+                        ],
+                        "properties": {
+                          "status": {
+                            "type": "string"
+                          }
+                        },
+                        "additionalProperties": true
+                      },
+                      "nullable": true
+                    },
+                    "details": {
+                      "type": "object",
+                      "example": {
+                        "database": {
+                          "status": "up"
+                        },
+                        "redis": {
+                          "status": "down",
+                          "message": "Could not connect"
+                        }
+                      },
+                      "additionalProperties": {
+                        "type": "object",
+                        "required": [
+                          "status"
+                        ],
+                        "properties": {
+                          "status": {
+                            "type": "string"
+                          }
+                        },
+                        "additionalProperties": true
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "summary": "Database liveness check",
+        "tags": [
+          "Health"
+        ]
+      }
+    },
+    "/v1/teams": {
+      "get": {
+        "operationId": "TeamsController_findAll",
+        "parameters": [
+          {
+            "name": "group",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "minLength": 1,
+              "maxLength": 1,
+              "type": "string"
+            }
+          },
+          {
+            "name": "confederation",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "summary": "List teams (filter by group/confederation)",
+        "tags": [
+          "Teams"
+        ]
+      }
+    },
+    "/v1/groups": {
+      "get": {
+        "operationId": "GroupsController_findAll",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "summary": "List all 12 groups with their teams",
+        "tags": [
+          "Groups"
+        ]
+      }
+    },
+    "/v1/matches": {
+      "get": {
+        "operationId": "MatchesController_findAll",
+        "parameters": [
+          {
+            "name": "stage",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "group",
+                "r32",
+                "r16",
+                "qf",
+                "sf",
+                "third",
+                "final"
+              ]
+            }
+          },
+          {
+            "name": "status",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "scheduled",
+                "live",
+                "ht",
+                "ft",
+                "postponed"
+              ]
+            }
+          },
+          {
+            "name": "group",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "minLength": 1,
+              "maxLength": 1,
+              "type": "string"
+            }
+          },
+          {
+            "name": "date",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "today",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "true",
+                "false"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "summary": "List matches (filter by stage/status/group/date/today)",
+        "tags": [
+          "Matches"
+        ]
+      }
+    },
+    "/v1/matches/{id}": {
+      "get": {
+        "operationId": "MatchesController_findOne",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "format": "uuid",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "summary": "Single match detail (incl. officials)",
+        "tags": [
+          "Matches"
+        ]
+      }
+    },
+    "/v1/matches/{id}/events": {
+      "get": {
+        "operationId": "MatchesController_findEvents",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "format": "uuid",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "summary": "Match events (goals/cards ticker)",
+        "tags": [
+          "Matches"
+        ]
+      }
+    },
+    "/v1/matches/{id}/lineups": {
+      "get": {
+        "operationId": "MatchesController_findLineups",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "format": "uuid",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "summary": "Match lineups (starting XI per team)",
+        "tags": [
+          "Matches"
+        ]
+      }
+    },
+    "/v1/standings": {
+      "get": {
+        "operationId": "StandingsController_findAll",
+        "parameters": [
+          {
+            "name": "group",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "minLength": 1,
+              "maxLength": 1,
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "summary": "Group standings (filter by group)",
+        "tags": [
+          "Standings"
+        ]
+      }
+    },
+    "/v1/bracket": {
+      "get": {
+        "operationId": "BracketController_getBracket",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "summary": "Knockout bracket by round. Teams are null (placeholders shown) until the group stage completes.",
+        "tags": [
+          "Bracket"
+        ]
+      }
+    },
+    "/v1/teams/{id}/profile": {
+      "get": {
+        "operationId": "ContentController_getTeamProfile",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "format": "uuid",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "summary": "Team profile: coach, style, key players, WC history",
+        "tags": [
+          "Content"
+        ]
+      }
+    },
+    "/v1/cities": {
+      "get": {
+        "operationId": "ContentController_getCities",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "summary": "List cities (with guide availability flag)",
+        "tags": [
+          "Content"
+        ]
+      }
+    },
+    "/v1/cities/{id}/guide": {
+      "get": {
+        "operationId": "ContentController_getCityGuide",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "format": "uuid",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "summary": "City guide: highlights, transit, food, tips + fan zones",
+        "tags": [
+          "Content"
+        ]
+      }
+    },
+    "/v1/h2h/{teamAId}/{teamBId}": {
+      "get": {
+        "operationId": "ContentController_getH2H",
+        "parameters": [
+          {
+            "name": "teamAId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "format": "uuid",
+              "type": "string"
+            }
+          },
+          {
+            "name": "teamBId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "format": "uuid",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "summary": "Head-to-head history (order-independent)",
+        "tags": [
+          "Content"
+        ]
+      }
+    },
+    "/v1/fan-zones": {
+      "get": {
+        "operationId": "ContentController_getFanZones",
+        "parameters": [
+          {
+            "name": "city",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "format": "uuid",
+              "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "summary": "Fan zones (filter by city)",
+        "tags": [
+          "Content"
+        ]
+      }
+    },
+    "/v1/visa": {
+      "get": {
+        "operationId": "ContentController_getVisaInfo",
+        "parameters": [
+          {
+            "name": "nationality",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "host",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "summary": "Visa requirements (filter by nationality/host)",
+        "tags": [
+          "Content"
+        ]
+      }
+    },
+    "/v1/news": {
+      "get": {
+        "operationId": "ContentController_getNews",
+        "parameters": [
+          {
+            "name": "limit",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "minimum": 1,
+              "maximum": 100,
+              "default": 20,
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "summary": "Latest news (limit 1-100)",
+        "tags": [
+          "Content"
+        ]
+      }
+    },
+    "/v1/odds": {
+      "get": {
+        "operationId": "ContentController_getTournamentOdds",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "summary": "Tournament odds",
+        "tags": [
+          "Content"
+        ]
+      }
+    },
+    "/v1/devices": {
+      "post": {
+        "operationId": "DevicesController_register",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterDeviceDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "summary": "Register or update a device (idempotent)",
+        "tags": [
+          "Devices"
+        ]
+      }
+    },
+    "/v1/devices/{deviceId}": {
+      "patch": {
+        "operationId": "DevicesController_updateToken",
+        "parameters": [
+          {
+            "name": "deviceId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateTokenDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "summary": "Update push token for an existing device",
+        "tags": [
+          "Devices"
+        ]
+      }
+    }
+  },
+  "info": {
+    "title": "Worldcup Backend API",
+    "description": "FIFA World Cup 2026 companion backend — REST v1",
+    "version": "1.0",
+    "contact": {}
+  },
+  "tags": [],
+  "servers": [],
+  "components": {
+    "schemas": {
+      "RegisterDeviceDto": {
+        "type": "object",
+        "properties": {
+          "deviceId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 64
+          },
+          "platform": {
+            "type": "string",
+            "enum": [
+              "ios",
+              "android"
+            ]
+          },
+          "pushToken": {
+            "type": "string"
+          },
+          "locale": {
+            "type": "string"
+          },
+          "timezone": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 2
+          }
+        },
+        "required": [
+          "deviceId",
+          "platform"
+        ]
+      },
+      "UpdateTokenDto": {
+        "type": "object",
+        "properties": {
+          "pushToken": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

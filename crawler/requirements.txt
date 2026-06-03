@@ -1,0 +1,12 @@
+# Python crawler worker — SEPARATE from the Node.js backend
+# Run: pip install -r requirements.txt && crawl4ai-setup
+#
+# IMPORTANT: Do NOT install torch/transformer extras (heavy).
+# TheSportsDB uses plain JSON endpoints — no browser automation needed.
+# crawl4ai is available for future JS-render tasks if required.
+
+crawl4ai>=0.8.0
+psycopg2-binary>=2.9
+python-dotenv>=1.0
+requests>=2.32
+feedparser>=6.0

@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "venue": "Al Bayt Stadium",
+    "location": "Al Khor",
+    "status": "completed",
+    "attendance": "67372",
+    "stage_name": "First stage",
+    "home_team_country": "QAT",
+    "away_team_country": "ECU",
+    "datetime": "2022-11-20T16:00:00Z",
+    "winner": "Ecuador",
+    "winner_code": "ECU",
+    "home_team": {
+      "country": "QAT",
+      "name": "Qatar",
+      "goals": 0,
+      "penalties": 0
+    },
+    "away_team": {
+      "country": "ECU",
+      "name": "Ecuador",
+      "goals": 2,
+      "penalties": 0
+    },
+    "last_checked_at": "2023-01-01T10:16:03Z",
+    "last_changed_at": "2023-01-01T10:16:03Z"
+  },
+  {
+    "id": 999,
+    "venue": "Test Stadium",
+    "location": "Test City",
+    "status": "future",
+    "attendance": null,
+    "stage_name": "First stage",
+    "home_team_country": "MEX",
+    "away_team_country": "RSA",
+    "datetime": "2026-06-11T19:00:00Z",
+    "winner": null,
+    "winner_code": null,
+    "home_team": {
+      "country": "MEX",
+      "name": "Mexico",
+      "goals": null,
+      "penalties": null
+    },
+    "away_team": {
+      "country": "RSA",
+      "name": "South Africa",
+      "goals": null,
+      "penalties": null
+    },
+    "last_checked_at": null,
+    "last_changed_at": null
+  },
+  {
+    "id": 998,
+    "venue": "MetLife Stadium",
+    "location": "East Rutherford",
+    "status": "in_progress",
+    "attendance": "82000",
+    "stage_name": "First stage",
+    "home_team_country": "ARG",
+    "away_team_country": "BRA",
+    "datetime": "2026-06-12T22:00:00Z",
+    "winner": null,
+    "winner_code": null,
+    "home_team": {
+      "country": "ARG",
+      "name": "Argentina",
+      "goals": 1,
+      "penalties": null
+    },
+    "away_team": {
+      "country": "BRA",
+      "name": "Brazil",
+      "goals": 0,
+      "penalties": null
+    },
+    "last_checked_at": "2026-06-12T22:34:00Z",
+    "last_changed_at": "2026-06-12T22:23:00Z"
+  }
+]

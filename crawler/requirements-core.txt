@@ -1,0 +1,7 @@
+# Lightweight deps for the dataset-build crawlers (ranking + news).
+# Plain JSON/RSS — NO browser automation, so crawl4ai/playwright are NOT needed.
+# (crawl4ai stays in requirements.txt for optional future JS-render tasks.)
+psycopg2-binary>=2.9
+python-dotenv>=1.0
+requests>=2.32
+feedparser>=6.0
