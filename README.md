@@ -1,6 +1,6 @@
 <div align="center">
 
-### 🏆 FIFA World Cup 2026™ &nbsp;·&nbsp; 11 June – 19 July 2026
+### 🏆 11 June – 19 July 2026
 
 <!-- COUNTDOWN:START -->
 <img src="assets/countdown.svg" alt="FIFA World Cup 2026 countdown" width="480">
@@ -10,7 +10,7 @@
 
 ---
 
-# worldcup-backend
+# FIFA World Cup 2026 Backend API - Live Score - Expanded FIFA Data
 
 > A fast, modular backend for a **FIFA World Cup 2026 companion app** — REST + WebSocket, powered by a **pre-loaded PostgreSQL dataset** you get the moment you clone.
 
