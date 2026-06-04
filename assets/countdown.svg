@@ -16,6 +16,6 @@
 
   <!-- Days box (the number between the markers is rewritten by the Action) -->
   <rect x="648" y="30" width="180" height="90" rx="14" fill="#ffffff" fill-opacity="0.12" stroke="#ffffff" stroke-opacity="0.25"/>
-  <text x="738" y="86" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="46" font-weight="800" fill="#ffffff"><!--D-->7<!--/D--></text>
+  <text x="738" y="86" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="46" font-weight="800" fill="#ffffff"><!--D-->6<!--/D--></text>
   <text x="738" y="108" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" letter-spacing="2" fill="#c3c8ff"><!--L-->DAYS TO KICKOFF<!--/L--></text>
 </svg>
